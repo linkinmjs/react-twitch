@@ -9,6 +9,7 @@ import Header from './components/Header';
 import Games from './components/Games';
 import Stream from './components/Stream';
 
+import './styles.css';
 
 function App() {
   return (
