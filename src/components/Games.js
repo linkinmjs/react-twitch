@@ -13,15 +13,17 @@ const Games = () => {
             //asignando sizes sobre url de imagen
             let dataArray = result.data.data;
             let finalArray = dataArray.map(game => {
-                let newURL = game.box_art_url.replace('{width}', '300').replace('{height}', '300');
+                let newURL = game.box_art_url
+                    .replace('{width}', '300')
+                    .replace('{height}', '300');
                 game.box_art_url = newURL;
+                return game;
             })
-
-            //console.log(result.data.data)
-            setGames(result.data.data);
+            //console.log(finalArray)
+            setGames(finalArray);
         }
         fetchData();
-    })
+    }, []);
 
     return ( 
         <div>
