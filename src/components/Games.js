@@ -30,10 +30,10 @@ const Games = () => {
             <h1> Most Popular Games</h1>
             <div className='row'>
                 {games.map(game => (
-                    <div className='col-4'>
+                    <div className='col-4'  key={game.id}>
                         <div className='card'>
 
-                            <img className="card-img-top" src={game.box_art_url}/>
+                            <img className="card-img-top" src={game.box_art_url} alt={game.name}/>
                             <div className="card-body">
                                 <h5 className="card-title">{game.name}</h5>
                                 <button className="btn btn-success">
